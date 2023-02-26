@@ -10,7 +10,7 @@
 /*! Section and Scroll Animations */
 
 .section-one {
-  min-height: 100vh;
+  max-height: 100vh;
   position: relative;
   background-color: #fffade;
 }
@@ -258,10 +258,30 @@ li a:hover::after {
 }
 
 /*! About Me Styles */
-.section-two {
+#section-two {
   margin: 0;
   padding: 0;
+  display: grid;
+
+  background-color: #302e9a;
+  color: white;
 }
+
+.about-one {
+  grid-area: one;
+  margin: 2rem;
+}
+
+.about-two {
+  grid-area: two;
+  margin: 2em;
+}
+
+.about-three {
+  grid-area: three;
+  margin: 2em;
+}
+
 .about {
   position: relative;
   font-size: 1.3rem;
@@ -310,8 +330,8 @@ li a:hover::after {
 
 .contact-me {
   border: none;
-  background-color: #ffcc29;
-  color: #00af91;
+  background-color: #302e9a;
+  color: #46bea3;
   border-radius: 10px;
   /* padding: 0.5em 1em; */
   font-size: 1.5rem;
@@ -320,9 +340,7 @@ li a:hover::after {
 }
 
 .contact-me:hover {
-  color: #ffcc29;
-  background-color: #04c4a4;
-  box-shadow: 3px 3px #ffcc29;
+  box-shadow: 3px 3px #46bea3;
   transform: translate(-3px, -3px);
   cursor: pointer;
 }
@@ -567,7 +585,7 @@ li a:hover::after {
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .container {
     display: grid;
-    grid-template-areas: "titles titles" "about about";
+    grid-template-areas: "titles titles" "about about" "button button";
   }
 
   .logo {
@@ -606,6 +624,10 @@ li a:hover::after {
   .about-text {
     padding: 0.5em;
     text-align: center;
+  }
+
+  #section-two {
+    grid-template-areas: "one" "two" "three";
   }
 
   .heading {
@@ -665,7 +687,7 @@ li a:hover::after {
     grid-area: button;
     display: flex;
     justify-content: center;
-    margin-bottom: 0.3em;
+    margin: 2em;
   }
 
   .scroller {
