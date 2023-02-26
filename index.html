@@ -176,13 +176,45 @@
         </div>
       </div>
     </section>
+    <section id="section-four">
+      <div class="contact-form">
+        <form class="form" onsubmit="sendEmail();">
+          <div class="contact-title">Contact Me!</div>
+          <div class="contact-name">
+            <input type="text" id="name" placeholder="Your Name" required />
+          </div>
+          <div class="contact-email">
+            <input type="email" id="email" placeholder="Your Email" required />
+          </div>
+          <div class="contact-phone">
+            <input type="text" id="phone" placeholder="Your Phone Number" />
+          </div>
+          <div class="contact-subject">
+            <input type="text" id="subject" placeholder="Subject" />
+          </div>
+          <div class="contact-message">
+            <textarea
+              id="messsage"
+              cols="30"
+              rows="10"
+              placeholder="Message"
+            ></textarea>
+          </div>
+          <div class="send-btn">
+            <button type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+      <p class="copyright">© Carlos Figueroa.</p>
+    </section>
 
     <!-- <div class="bottom-container"> -->
     <!-- <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a> -->
     <!-- <a class="footer-link" href="https://twitter.com/">Twitter</a> -->
     <!-- <a class="footer-link" href="https://www.appbrewery.co/">Website</a> -->
-    <!-- <p>© Carlos Figueroa.</p> -->
+
     <!-- </div> -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>

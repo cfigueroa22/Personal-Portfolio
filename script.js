@@ -28,34 +28,23 @@ navMenu.addEventListener("scroll", (e) => {
   }
 });
 
-//! Dark Mode
-// let darkMode = localStorage.getItem("darkMode");
-// const darkModeToggle = document.querySelector("#dark-mode-toggle");
-
-// const enableDarkMode = () => {
-//   document.body.classList.add("darkmode");
-//   localStorage.setItem("darkMode", "enabled");
-// };
-
-// const disableDarkMode = () => {
-//   document.body.classList.remove("darkmode");
-//   localStorage.setItem("darkMode", null);
-// };
-
-// if (darkMode === "enabled") {
-//   enableDarkMode();
-// }
-
-// darkModeToggle.addEventListener("click", () => {
-//   darkMode = localStorage.getItem("darkMode");
-//   if (darkMode !== "enabled") {
-//     enableDarkMode();
-//   } else {
-//     disableDarkMode();
-//   }
-// });
-const darkModeToggle = document.querySelector(".dark-mode-toggle");
-
-darkModeToggle.addEventListener("click", () => {
-  darkModeToggle.classList.toggle("dark-mode");
-});
+//! Script to Send Email
+function sendEmail() {
+  Email.send({
+    Host: "smtp.yahoo.com",
+    Username: "username",
+    Password: "password",
+    To: "them@website.com",
+    From: document.getElementById("email").value,
+    Subject: document.getElementById("subject").value,
+    Body:
+      "Name: " +
+      document.getElementById("name").value +
+      "<br> Email: " +
+      document.getElementById("email").value +
+      "<br> Phone Number: " +
+      document.getElementById("phone").value +
+      "<br> Message: " +
+      document.getElementById("message").value,
+  }).then((message) => alert("Thank you! I will respond back ASAP!"));
+}
