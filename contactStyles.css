@@ -1,0 +1,51 @@
+* {
+    /* background-color: #4BAEA0; */
+    /* background-color: black; */
+}
+
+body {
+    background-image: url(/images/keyboard.png);
+    background-size: cover;
+}
+/*
+input {
+    color: white;
+}
+
+p {
+    color: white;
+}r
+
+h4 {
+    color: white;
+}
+*/
+
+p {
+    color: white;
+}
+
+h4 {
+    color: white;
+}
+.form {
+    /* color: #4BAEA0; */
+    position: absolute;
+    width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    left: 37%;
+    background-color: #4BAEA0;
+    padding: 25px;
+    border-radius: 50px;
+}
+
+.details {
+    position: absolute;
+    /* display: flex; */
+    left: 37%;
+    top: 40%;
+    background-color: #4BAEA0;
+    padding: 25px;
+    border-radius: 50px;
+}

@@ -1,0 +1,436 @@
+
+
+header {
+  background-color: #4BAEA0;
+  color: #ffffff;
+}
+
+nav {
+  overflow: hidden;
+  text-align: center;
+  height: 45px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 3%;
+}
+
+li {
+  font-size: 140%;
+  padding: 0 6px;
+  display: flex;
+ }
+
+span {
+  color: #4BAEA0;
+}
+
+td {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+
+
+/* TOP SECTION */
+.top-container {
+  background-color: black;
+  width: 100%;
+  height: 700px;
+  }
+
+.heading {
+    font-family: "Josefin Sans", sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 10vw;
+    white-space: nowrap;
+    text-align: left;
+    float: left;
+    position: absolute;
+    top: 3.5%;
+    left: 3%;
+  }
+
+.subtitle {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 6.5vw;
+    text-align: left;
+    /* text-align: justify; */
+    position: absolute;
+    white-space: nowrap;
+    top: 15%;
+    left: 4%;
+    /* transform: translate(-50%, -50%); */
+    color: rgb(255, 255, 255);
+}
+
+.about {
+  /* color: rgb(255, 255, 255); */
+  /* position: absolute; */
+  /* left: -15%; */
+  /* right: 35%; */
+  /* top: 26%; */
+  /* margin-left: 20%; */
+  /* margin-right: 20%; */
+  /* font-size: 2vw; */
+  /* text-align: left; */
+  /* font-family: 'Montserrat', sans-serif; */
+  /* background: rgba(rgb(255, 0, 0), green, rgb(4, 4, 226), 10); */
+  /* border-radius: 50px; */
+  /* backdrop-filter: blur(5px) brightness(0.7); */
+}
+
+.me {
+  width: 25%;
+  border-radius: 100px;
+}
+
+.linkedin-img {
+  width: 7vw;
+  position: absolute;
+  top: 43.5%;
+  left: 25%;
+  /* color: none; */
+  transition: width 1s, height 1s, transform 1s; 
+}
+
+.linkedin-img:hover {
+  background: #4BAEA0;
+  border-radius: 50px;
+  width: 6.5vw;
+  transform: rotate(360deg);
+}
+
+.github-img {
+  width: 7vw;
+  position: absolute;
+  top: 43.5%;
+  left: 17%;
+  /* z-index: 0; */
+  transition: width 1s, height 1s, transform 1s;
+}
+
+.github-img:hover {
+  background: #4BAEA0;
+  border-radius: 50px;
+  width: 6.5vw;
+  transform: rotate(360deg);
+}
+
+/* MIDDLE SECTION */
+
+.middle-container {
+  width: 100%;
+  height: 210px;
+  background-color: #4BAEA0;
+}
+
+.toolbox {
+  position: absolute;
+  color: white;
+  top: 53%;
+  right: 40%;
+  justify-content: center;
+}
+.table-heading {
+  font-size: 4vw;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
+
+.html {
+  width: 6vw;
+  padding-right: 30px;
+}
+
+.css {
+  width: 6vw;
+  padding-right: 30px;
+}
+
+.js {
+  width: 6vw;
+  padding-right: 30px;
+}
+
+.github-logo {
+  width: 5vw;
+}
+
+.table-txt {
+  font-size: 1vw;
+  text-align: center;
+  padding-right: 25px;
+}
+
+.table-txt-git {
+  font-size: 1vw;
+  text-align: center;
+}
+
+/* BOTTOM SECTION */
+
+.bottom-container {
+  color: #4BAEA0;
+  text-align: center;
+  background-image: url(/images/keyboard.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+}
+
+#projectTitle {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding-top: 1%;
+  font-size: 6vw;
+  text-shadow: 3px 3px white;
+}
+
+/* nav bar position will be sticky */
+
+/* MEDIA QUERIES */
+
+/* Extra Large Screen */
+
+/*
+@media (max-width: 1442px){
+  .heading {
+    top: 8%;
+  }
+
+  .subtitle{
+    top: 25%;
+  }
+
+  .about {
+    top: 44%;
+  }
+
+  .toolbox {
+    top: 89%;
+  }
+
+  .linkedin-img {
+    top: 73%;
+  }
+
+  .github-img {
+    top: 73%;
+  }
+}
+
+/* Large Screen */
+/*
+@media (max-width: 1200px) {
+  .subtitle {
+    top: 20%;
+  }
+
+  .about {
+    top: 33%;
+  }
+
+  .linkedin-img {
+    top: 49%;
+  }
+
+  .github-img {
+    top: 49%;
+  }
+
+  .toolbox {
+   top: 65%;
+  }
+
+}
+
+/* Laptop */
+/*
+@media (max-width: 992px) {
+  nav {
+    padding-top: 10px;
+  }
+
+  li {
+    font-size: 3vw;
+  }
+
+  .heading {
+   top: 20%;
+ } 
+
+  .subtitle {
+   top: 37%;
+ }
+
+ .about {
+   top: 65%;
+ }
+
+ .toolbox {
+  top: 130%;
+  left: 30%;
+ }
+
+ .table-heading {
+   padding-left: 20%;
+ }
+
+ .linkedin-img {
+   top: 100%;
+ }
+
+ .github-img {
+   top: 100%;
+ }
+
+ .html {
+   width: 10vw;
+ }
+
+ .css {
+   width: 10vw;
+ }
+
+ .js {
+   width: 10vw;
+ }
+
+ .github-logo {
+   width: 8vw;
+ }
+
+ .table-txt {
+   font-size: 2vw;
+ }
+
+ .table-txt-git {
+   font-size: 2vw;
+ }
+}
+
+/* Tablet */
+/*
+@media (max-width: 768px) {
+  .heading {
+    font-size: 12vw;
+  }
+
+  .subtitle {
+    font-size: 8vw;
+  }
+
+  .about {
+    font-size: 3.5vw;
+    top: 55%;
+  }
+
+  .linkedin-img {
+    top: 115%;
+  }
+
+  .github-img {
+    top: 115%;
+  }
+
+  .middle-container {
+    height: 165px;
+  }
+}
+
+/* Mobile */
+/*
+@media (max-width: 600px) {
+
+
+}
+
+@media (max-width: 400px) {
+
+ nav {
+   height: 48px;
+
+ }
+
+ .heading {
+   font-size: 20vw;
+   display: flex;
+   flex-wrap: wrap;
+   top: 8%;
+ }
+
+ .subtitle {
+   font-size: 18vw;
+   display: flex;
+   flex-wrap: wrap;
+   top: 30%;
+ }
+
+ .about {
+   top: 53%;
+   font-size: 4.5vw;
+   text-align: left;
+   margin: 0 5px;
+   left: 20px;
+ }
+
+ .linkedin-img {
+   width: 12vw;
+   left: 30%;
+   top: 75%;
+ }
+
+ .github-img {
+   width: 12vw;
+   top: 75%;
+ }
+
+ .toolbox {
+   top: 85%;
+ }
+
+ li {
+   font-size: 6vw;
+   /* padding-bottom: 20%; 
+ }
+
+ .html {
+   width: 17vw;
+ }
+
+ .css {
+   width: 17vw;
+ }
+
+ .js {
+   width: 17vw;
+ }
+
+ .github-logo {
+   width: 12vw;
+ }
+
+ .table-heading {
+   font-size: 7vw;
+   white-space: nowrap;
+ }
+
+ .middle-container{
+   height: 130px;
+ }
+}
+*/
+
+
