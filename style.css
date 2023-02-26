@@ -12,7 +12,7 @@
 .section-one {
   max-height: 100vh;
   position: relative;
-  background-color: #fffade;
+  background-color: #ddfff7;
 }
 
 /* .section-one::before {
@@ -112,7 +112,7 @@ when the page first opens */
   display: flex;
   width: 100%;
   align-items: center;
-  background-color: #fffade;
+  background-color: #ddfff7;
 }
 
 .navbar ul {
@@ -262,24 +262,29 @@ li a:hover::after {
   margin: 0;
   padding: 0;
   display: grid;
-
+  text-align: center;
   background-color: #302e9a;
   color: white;
 }
 
+.about-title {
+  grid-area: about-title;
+  margin: 1em;
+}
+
 .about-one {
   grid-area: one;
-  margin: 2rem;
+  margin: 1em 2em 2em 2em;
 }
 
 .about-two {
   grid-area: two;
-  margin: 2em;
+  margin: 1em 2em 2em 2em;
 }
 
 .about-three {
   grid-area: three;
-  margin: 2em;
+  margin: 1em 2em 2em 2em;
 }
 
 .about {
@@ -303,6 +308,16 @@ li a:hover::after {
   /* background-color: #0b0b0c;
   border-radius: 5px;
   padding: 1.3px; */
+}
+
+.about-icons {
+  width: 5em;
+}
+
+.about-icon-title {
+  font-size: 1.8rem;
+  text-decoration-line: underline;
+  color: #93e1d8;
 }
 
 .contact-icons {
@@ -331,7 +346,7 @@ li a:hover::after {
 .contact-me {
   border: none;
   background-color: #302e9a;
-  color: #46bea3;
+  color: #93e1d8;
   border-radius: 10px;
   /* padding: 0.5em 1em; */
   font-size: 1.5rem;
@@ -340,7 +355,7 @@ li a:hover::after {
 }
 
 .contact-me:hover {
-  box-shadow: 3px 3px #46bea3;
+  box-shadow: 3px 3px #93e1d8;
   transform: translate(-3px, -3px);
   cursor: pointer;
 }
@@ -349,10 +364,7 @@ li a:hover::after {
 #section-three {
   width: 100%;
   min-height: 100vh;
-  background-image: url(/images/Simple\ Shiny.svg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  background-color: #ddfff7;
 }
 
 .project-container {
@@ -366,13 +378,12 @@ li a:hover::after {
 
 .project-title {
   font-size: 7rem;
-  color: #fff;
+  color: black;
   text-decoration-line: underline;
   grid-area: projectTitle;
   display: flex;
   justify-content: center;
   margin-top: 10%;
-  text-shadow: 4px 4px 7px #ffcc29;
 }
 
 #project1 {
@@ -489,7 +500,7 @@ li a:hover::after {
     align-items: center;
     width: 100%;
     padding: 0.5%;
-    background-color: #00af91;
+    background-color: #302e9a;
   }
 
   .mobile-list span .logo img {
@@ -627,7 +638,18 @@ li a:hover::after {
   }
 
   #section-two {
-    grid-template-areas: "one" "two" "three";
+    grid-template-areas: "about-title" "one" "two" "three";
+  }
+
+  .about-title {
+    font-size: 3rem;
+  }
+
+  .about-one,
+  .about-two,
+  .about-three {
+    font-size: 1.3rem;
+    padding: 0 1px;
   }
 
   .heading {
