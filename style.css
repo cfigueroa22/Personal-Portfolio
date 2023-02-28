@@ -15,7 +15,7 @@
   background-color: #ddfff7;
 }
 
-/* .section-one::before {
+.section-one::before {
   content: "";
   top: 0;
   bottom: 0;
@@ -25,10 +25,10 @@
   background-size: contain, cover;
   background-repeat: no-repeat;
   background-position: bottom right;
-  z-index: 9999;
+  /* z-index: 99; */
   position: absolute;
   opacity: 0.9;
-} */
+}
 
 /* These anitmations bring in the content smooth transition
 when the page first opens */
@@ -49,15 +49,16 @@ when the page first opens */
 /* This is for the scroller to direct to the Projects section */
 
 .scroll-down {
-  z-index: 9999;
+  z-index: 99999;
   height: 50px;
   width: 30px;
   border: 3px solid #46bea3;
   position: absolute;
   left: 50%;
-  bottom: 20%;
+  bottom: 5%;
   border-radius: 50px;
   cursor: pointer;
+  margin-bottom: 5%;
 }
 
 .scroll-down::before,
@@ -73,6 +74,7 @@ when the page first opens */
   border-top: transparent;
   border-left: transparent;
   animation: scrolldown 1s ease-in-out infinite;
+  z-index: 99999;
 }
 
 .scroll-down::after {
@@ -254,7 +256,10 @@ li a:hover::after {
   font-weight: 200;
   color: #302e9a;
   font-size: 5vw;
-  margin-bottom: 5%;
+}
+
+.titles {
+  padding: 2em 0 4em 2em;
 }
 
 /*! About Me Styles */
@@ -270,36 +275,38 @@ li a:hover::after {
 .about-title {
   grid-area: about-title;
   margin: 1em;
+  font-size: 5rem;
 }
 
 .about-one {
   grid-area: one;
-  margin: 1em 2em 2em 2em;
+  margin: 1em 10em 2em 10em;
+  font-size: 1.7rem;
 }
 
 .about-two {
   grid-area: two;
-  margin: 1em 2em 2em 2em;
+  margin: 1em 10em 2em 10em;
+  font-size: 1.7rem;
 }
 
 .about-three {
   grid-area: three;
-  margin: 1em 2em 2em 2em;
+  margin: 1em 10em 4em 10em;
+  font-size: 1.7rem;
 }
 
 .about {
   position: relative;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   line-height: 1.8;
   z-index: 99999;
-  margin: 0 8em;
   font-weight: 400;
-  /* display: flex;
-  justify-content: center; */
+  padding: 0 35em 3em 2em;
 }
 
 .about p span {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #302e9a;
   font-weight: 900;
   text-decoration-line: underline;
@@ -310,11 +317,11 @@ li a:hover::after {
 }
 
 .about-icons {
-  width: 5em;
+  width: 8em;
 }
 
 .about-icon-title {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   text-decoration-line: underline;
   color: #93e1d8;
 }
@@ -336,6 +343,10 @@ li a:hover::after {
   width: 6vw;
 }
 
+.contact-button .contact-me a {
+  color: #93e1d8;
+}
+
 .contact-me {
   border: none;
   background-color: #302e9a;
@@ -351,6 +362,10 @@ li a:hover::after {
   box-shadow: 3px 3px #93e1d8;
   transform: translate(-3px, -3px);
   cursor: pointer;
+}
+
+.contact-button {
+  padding: 0 0 10em 2em;
 }
 
 /*! Projects Styles */
@@ -398,8 +413,176 @@ li a:hover::after {
   margin: 5% 20%;
 }
 
-/*! LAPTOPS */
-@media screen and (min-width: 769px) and (max-width: 1023px) {
+#section-four {
+  background-color: #302e9a;
+  padding-bottom: 4.5em;
+}
+
+.contact-form {
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  display: grid;
+  grid-template-areas: "contact-title contact-title" "contact-name contact-email" "contact-subject contact-phone" "contact-message contact-message" "send-btn send-btn" "contact-icons contact-icons";
+  background-color: #ddfff7;
+  margin: 2em 0;
+  padding: 0 2em;
+}
+
+.contact-title {
+  grid-area: contact-title;
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 0.5em 0;
+}
+
+.contact-name {
+  grid-area: contact-name;
+  margin: 0.4em 0;
+}
+
+#name {
+  background-color: #ddfff7;
+  border: solid #302e9a;
+  width: 100%;
+  border-radius: 20px;
+  padding: 0.5em;
+}
+
+.contact-email {
+  grid-area: contact-email;
+  margin: 0.4em 0;
+}
+
+#email {
+  background-color: #ddfff7;
+  border: solid #302e9a;
+  border-radius: 5px;
+  width: 100%;
+  border-radius: 20px;
+  padding: 0.5em;
+}
+
+.contact-phone {
+  grid-area: contact-phone;
+  margin: 0.4em 0;
+}
+
+#phone {
+  background-color: #ddfff7;
+  border: solid #302e9a;
+  border-radius: 5px;
+  width: 100%;
+  border-radius: 20px;
+  padding: 0.5em;
+}
+
+.contact-subject {
+  grid-area: contact-subject;
+  margin: 0.4em 0;
+}
+
+#subject {
+  background-color: #ddfff7;
+  border: solid #302e9a;
+  border-radius: 5px;
+  width: 100%;
+  border-radius: 20px;
+  padding: 0.5em;
+}
+
+.contact-message {
+  grid-area: contact-message;
+  margin: 0.4em 0;
+}
+
+textarea {
+  background-color: #ddfff7;
+  border: solid #302e9a;
+  border-radius: 5px;
+  border-radius: 15px;
+  padding: 0.5em;
+  width: 100%;
+}
+
+.send {
+  grid-area: send-btn;
+  margin: 0.2em 0 1em 0;
+  display: flex;
+  justify-content: center;
+}
+
+.send-btn {
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 10px;
+  background-color: #302e9a;
+  color: #93e1d8;
+}
+
+.send-btn:hover {
+  box-shadow: 3px 3px white;
+  transform: translate(-3px, -3px);
+  cursor: pointer;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+}
+
+.contact-icons {
+  grid-area: contact-icons;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0.5em;
+}
+
+.linkedin-img,
+.github-img {
+  background-color: white;
+  width: 2em;
+  margin: 0.3em 0;
+}
+
+.linkedin-img:hover,
+.github-img:hover {
+  width: 2.5em;
+  background-color: #302e9a;
+}
+
+.linkedin-img {
+  margin: 0 0.5em;
+}
+
+.github-img {
+  margin: 0 0.5em;
+}
+
+.contact-image {
+  background-color: #ddfff7;
+  margin: 2em 0;
+  align-items: center;
+}
+
+.contact-img img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
+/* ! DESKTOP  */
+@media screen and (max-width: 1200px) {
+  .heading {
+    color: red;
+  }
+}
+/* @media screen and (max-width: 1200px) {
   .section-one::before {
     content: "";
     top: 0;
@@ -412,7 +595,6 @@ li a:hover::after {
     background-position: bottom right;
     z-index: 9999;
     position: absolute;
-    /* opacity: 1; */
   }
 
   .container {
@@ -422,11 +604,12 @@ li a:hover::after {
 
   .titles {
     grid-area: titles;
-    margin: 1em 0 0 1em;
+    margin: 3em 0 0 3em;
   }
 
   .heading {
-    font-size: 5rem;
+    font-size: 6rem;
+    color: red;
   }
 
   .subtitle {
@@ -435,13 +618,13 @@ li a:hover::after {
 
   .about {
     grid-area: about;
-    margin: 0 10em 2em 1em;
+    margin: 2em 10em 2em 2em;
     padding: 0 1em 0 0;
   }
 
   .contact-button {
     grid-area: button;
-    margin: 0.5em 0 4em 1em;
+    margin: 0.5em 0 5em 2em;
     z-index: 99999;
   }
 
@@ -484,8 +667,6 @@ li a:hover::after {
     background-color: #ddfff7;
     margin: 2em 0;
     padding: 0 0.5em;
-
-    /* border-radius: 10px; */
   }
 
   .contact-title {
@@ -632,11 +813,259 @@ li a:hover::after {
     font-size: 1rem;
     color: white;
   }
-}
+ } */
+
+/*! LAPTOPS */
+/* @media screen and (min-width: 769px) and (max-width: 1023px) {
+  .section-one::before {
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: url(/images/Main-Portfolio-Image.png);
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    z-index: 9999;
+    position: absolute;
+  }
+
+  .container {
+    display: grid;
+    grid-template-areas: "titles" "about" "button";
+  }
+
+  .titles {
+    grid-area: titles;
+    margin: 1em 0 0 1em;
+  }
+
+  .heading {
+    font-size: 5rem;
+  }
+
+  .subtitle {
+    font-size: 4rem;
+  }
+
+  .about {
+    grid-area: about;
+    margin: 0 10em 2em 1em;
+    padding: 0 1em 0 0;
+  }
+
+  .contact-button {
+    grid-area: button;
+    margin: 0.5em 0 4em 1em;
+    z-index: 99999;
+  }
+
+  .scroller {
+    z-index: 9999;
+  }
+
+  .scroll-down {
+    margin-bottom: 5%;
+  }
+
+  .about-title {
+    font-size: 3.5rem;
+  }
+
+  .about-icons {
+    width: 6.5em;
+  }
+
+  .about-one,
+  .about-two,
+  .about-three {
+    font-size: 1.3rem;
+    margin: 1em 3.5em 2em 3.5em;
+  }
+
+  #section-four {
+    background-color: #302e9a;
+    padding-bottom: 4.5em;
+  }
+
+  .contact-form {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form {
+    display: grid;
+    grid-template-areas: "contact-title contact-title" "contact-name contact-email" "contact-subject contact-phone" "contact-message contact-message" "send-btn send-btn" "contact-icons contact-icons";
+    background-color: #ddfff7;
+    margin: 2em 0;
+    padding: 0 0.5em;
+  }
+
+  .contact-title {
+    grid-area: contact-title;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 0.5em 0;
+  }
+
+  .contact-name {
+    grid-area: contact-name;
+    margin: 0.4em 0;
+  }
+
+  #name {
+    background-color: #ddfff7;
+    border: solid #302e9a;
+    width: 100%;
+    border-radius: 20px;
+    padding: 0.5em;
+  }
+
+  .contact-email {
+    grid-area: contact-email;
+    margin: 0.4em 0;
+  }
+
+  #email {
+    background-color: #ddfff7;
+    border: solid #302e9a;
+    border-radius: 5px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 0.5em;
+  }
+
+  .contact-phone {
+    grid-area: contact-phone;
+    margin: 0.4em 0;
+  }
+
+  #phone {
+    background-color: #ddfff7;
+    border: solid #302e9a;
+    border-radius: 5px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 0.5em;
+  }
+
+  .contact-subject {
+    grid-area: contact-subject;
+    margin: 0.4em 0;
+  }
+
+  #subject {
+    background-color: #ddfff7;
+    border: solid #302e9a;
+    border-radius: 5px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 0.5em;
+  }
+
+  .contact-message {
+    grid-area: contact-message;
+    margin: 0.4em 0;
+  }
+
+  textarea {
+    background-color: #ddfff7;
+    border: solid #302e9a;
+    border-radius: 5px;
+    border-radius: 15px;
+    padding: 0.5em;
+    width: 100%;
+  }
+
+  .send {
+    grid-area: send-btn;
+    margin: 0.2em 0 1em 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .send-btn {
+    padding: 0.5em 1em;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 10px;
+    background-color: #302e9a;
+    color: #93e1d8;
+  }
+
+  .send-btn:hover {
+    box-shadow: 3px 3px white;
+    transform: translate(-3px, -3px);
+    cursor: pointer;
+  }
+
+  .contact-icons {
+    grid-area: contact-icons;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0.5em;
+  }
+
+  .linkedin-img,
+  .github-img {
+    background-color: white;
+    width: 2em;
+    margin: 0.3em 0;
+  }
+
+  .linkedin-img:hover,
+  .github-img:hover {
+    width: 2.5em;
+    background-color: #302e9a;
+  }
+
+  .linkedin-img {
+    margin: 0 0.5em;
+  }
+
+  .github-img {
+    margin: 0 0.5em;
+  }
+
+  .contact-image {
+    background-color: #ddfff7;
+    margin: 2em 0;
+    align-items: center;
+  }
+
+  .contact-img img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+  }
+
+  .copyright {
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+  }
+} */
 
 /* ! TABLET */
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
+  .section-one::before {
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: url(/images/Main-Portfolio-Image.png);
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    display: none;
+    z-index: 9999;
+    position: absolute;
+  }
+
   .titles {
     grid-area: titles;
     text-align: center;
@@ -928,8 +1357,9 @@ li a:hover::after {
   .scroller {
     display: none;
   }
+} */
 
-  /* .hamburger {
+/* .hamburger {
     display: block;
   }
 
@@ -1002,11 +1432,10 @@ li a:hover::after {
     left: 65%;
     height: 40%;
   } */
-}
 
 /* ! MOBILE  */
 
-@media screen and (min-width: 320px) and (max-width: 480px) {
+/* @media screen and (min-width: 320px) and (max-width: 480px) {
   .container {
     display: grid;
     grid-template-areas: "titles titles" "about about" "button button";
@@ -1259,4 +1688,4 @@ li a:hover::after {
     font-size: 1rem;
     color: white;
   }
-}
+} */
