@@ -259,7 +259,8 @@ li a:hover::after {
 }
 
 .titles {
-  padding: 2em 0 4em 2em;
+  padding: 2em 0 4em 0;
+  margin-left: 2em;
 }
 
 /*! About Me Styles */
@@ -302,7 +303,8 @@ li a:hover::after {
   line-height: 1.8;
   z-index: 99999;
   font-weight: 400;
-  padding: 0 35em 3em 2em;
+  padding: 0 35em 1em 0;
+  margin-left: 1.5em;
 }
 
 .about p span {
@@ -575,13 +577,199 @@ textarea {
   margin-left: auto;
   width: 100%;
 }
+/* !DEKSTOP */
+@media screen and (max-width: 1500px) {
+  .heading {
+    color: blue;
+  }
+
+  .contact-title {
+    color: blue;
+  }
+
+  .about-title {
+    color: blue;
+  }
+
+  .about {
+    padding-right: 22em;
+  }
+}
 
 /* ! DESKTOP  */
 @media screen and (max-width: 1200px) {
   .heading {
     color: red;
   }
+
+  .contact-title {
+    color: red;
+  }
+
+  .about-title {
+    color: red;
+  }
+
+  .about {
+    padding-right: 18em;
+  }
 }
+
+/*! LAPTOPS */
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  .heading {
+    color: yellow;
+  }
+
+  .about {
+    font-size: 1.3rem;
+    padding-bottom: 0;
+  }
+
+  .about-title {
+    color: yellow;
+  }
+
+  .about-one,
+  .about-two,
+  .about-three {
+    margin: 1em 5em 2em 5em;
+  }
+
+  .contact-title {
+    color: yellow;
+  }
+}
+
+.contact-button {
+  margin: 2em 0 0 0;
+}
+
+/*! TABLET  */
+@media screen and (max-width: 768px) {
+  .heading {
+    color: green;
+    font-size: 5rem;
+  }
+
+  .contact-title {
+    color: green;
+  }
+
+  .about-title {
+    color: green;
+  }
+
+  .subtitle {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+  }
+
+  .section-one::before {
+    display: none;
+  }
+
+  .navbar .desktop-list {
+    display: none;
+  }
+
+  .mobile-list {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999999;
+  }
+
+  .mobile-list span {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0.5%;
+    background-color: #302e9a;
+  }
+
+  .mobile-list span .logo img {
+    width: 120%;
+    cursor: pointer;
+  }
+
+  a .contact-logo:hover,
+  a .resume-logo:hover,
+  a .project-logo:hover,
+  a .about-logo:hover {
+    border: solid 2px white;
+    border-radius: 50px;
+  }
+
+  .titles {
+    text-align: center;
+  }
+
+  .about {
+    grid-area: about;
+    margin: 0 3em 1em 3em;
+    font-size: 1em;
+    font-weight: 400;
+    z-index: 9999;
+    border-radius: 5px;
+    padding: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  .about::before {
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: url(/images/Main-Portfolio-Image.png);
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    z-index: 999;
+    position: absolute;
+    opacity: 0.25;
+  }
+
+  .about-text {
+    padding: 0.5em;
+    text-align: center;
+  }
+
+  .scroller {
+    display: none;
+  }
+
+  .contact-button {
+    display: flex;
+    justify-content: center;
+    grid-area: button;
+    margin: 3em 0 0 0;
+  }
+
+  .about-title {
+    font-size: 3.5rem;
+  }
+
+  .about-one,
+  .about-two,
+  .about-three {
+    font-size: 1.5rem;
+    padding: 0 1em;
+    margin: 1em 3em 2em 3em;
+  }
+
+  .about-icon-title {
+    font-size: 2rem;
+  }
+
+  .about-icons {
+    width: 7em;
+  }
+}
+
 /* @media screen and (max-width: 1200px) {
   .section-one::before {
     content: "";
