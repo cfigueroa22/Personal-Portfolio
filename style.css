@@ -161,14 +161,14 @@ li a:hover::after {
 .heading {
   position: relative;
   font-weight: 300;
-  font-size: 8vw;
+  font-size: 8.5vw;
 }
 
 .subtitle {
   position: relative;
   font-weight: 200;
   color: #302e9a;
-  font-size: 5vw;
+  font-size: 5.5vw;
 }
 
 .titles {
@@ -188,31 +188,32 @@ li a:hover::after {
 
 .about-title {
   grid-area: about-title;
-  margin: 1em;
-  font-size: 5rem;
+  text-decoration-line: underline;
+  margin: 0.5em 1em 1em 1em;
+  font-size: 8vw;
 }
 
 .about-one {
   grid-area: one;
   margin: 1em 10em 2em 10em;
-  font-size: 1.5rem;
+  font-size: 2vw;
 }
 
 .about-two {
   grid-area: two;
   margin: 1em 10em 2em 10em;
-  font-size: 1.5rem;
+  font-size: 2vw;
 }
 
 .about-three {
   grid-area: three;
   margin: 1em 10em 4em 10em;
-  font-size: 1.5rem;
+  font-size: 2vw;
 }
 
 .about {
   position: relative;
-  font-size: 1.5rem;
+  font-size: 2vw;
   line-height: 1.8;
   z-index: 99999;
   font-weight: 400;
@@ -221,7 +222,7 @@ li a:hover::after {
 }
 
 .about p span {
-  font-size: 1.5rem;
+  font-size: 2vw;
   color: #302e9a;
   font-weight: 900;
   text-decoration-line: underline;
@@ -236,7 +237,7 @@ li a:hover::after {
 }
 
 .about-icon-title {
-  font-size: 2rem;
+  font-size: 3.5vw;
   text-decoration-line: underline;
   color: #93e1d8;
 }
@@ -371,7 +372,7 @@ li a:hover::after {
 .contact-title {
   grid-area: contact-title;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 7vw;
   margin: 0.5em 0;
 }
 
@@ -392,10 +393,14 @@ li a:hover::after {
 
 #name {
   background-color: #ddfff7;
-  border: solid #302e9a;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  border-bottom: 2px solid #302e9a;
   width: 100%;
-  border-radius: 20px;
   padding: 0.5em;
+  outline: none;
 }
 
 .contact-email {
@@ -405,11 +410,14 @@ li a:hover::after {
 
 #email {
   background-color: #ddfff7;
-  border: solid #302e9a;
-  border-radius: 5px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  border-bottom: 2px solid #302e9a;
   width: 100%;
-  border-radius: 20px;
   padding: 0.5em;
+  outline: none;
 }
 
 .contact-message {
@@ -419,11 +427,11 @@ li a:hover::after {
 
 textarea {
   background-color: #ddfff7;
-  border: solid #302e9a;
-  border-radius: 5px;
-  border-radius: 15px;
+  border: none #302e9a;
+  border-bottom: 2px solid #302e9a;
   padding: 0.5em;
   width: 100%;
+  outline: none;
 }
 
 .send {
@@ -448,8 +456,6 @@ textarea {
 .send-btn:hover {
   color: #302e9a;
   background-color: #46bea3;
-  /* box-shadow: 3px 3px white;
-  transform: translate(-3px, -3px); */
   cursor: pointer;
 }
 
