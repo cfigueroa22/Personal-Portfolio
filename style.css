@@ -4,7 +4,10 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  font-family: "Albert Sans", sans-serif;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
 }
 
 /*! Section and Scroll Animations */
@@ -15,7 +18,7 @@
   background-color: #ddfff7;
 }
 
-/* .section-one::before {
+.section-one::before {
   content: "";
   top: 0;
   bottom: 0;
@@ -27,7 +30,7 @@
   background-position: bottom right;
   position: absolute;
   opacity: 0.9;
-} */
+}
 
 /* These anitmations bring in the content smooth transition
 when the page first opens */
@@ -157,25 +160,33 @@ li a:hover::after {
 }
 
 /*! Title Styles */
+.greet {
+  font-size: 3.5vw;
+  padding-left: 0.4em;
+  color: #302e9a;
+}
+
 .heading {
-  position: relative;
-  text-align: center;
-  font-weight: 300;
-  font-size: 8.5vw;
+  /* position: relative; */
+  font-weight: 400;
+  font-size: 7vw;
+  padding-left: 0;
 }
 
 .subtitle {
-  position: relative;
-  text-align: center;
-  margin: 1em 0 0 0;
-  font-weight: 200;
+  /* position: relative; */
+  /* margin: 1em 0 0 0; */
+  font-weight: 300;
   color: #302e9a;
-  font-size: 5.5vw;
+  font-size: 4.5vw;
+  padding-left: 0.2em;
+  padding-bottom: 0.5em;
 }
 
 .titles {
-  padding: 2em 0 4em 0;
-  margin-left: 2em;
+  display: flex;
+  flex-direction: column;
+  padding: 4em 0 0 2em;
 }
 
 /*! About Me Styles */
@@ -188,7 +199,41 @@ li a:hover::after {
   color: white;
 }
 
-.about {
+.scroll-down-two {
+  z-index: 99999;
+  height: 50px;
+  width: 30px;
+  border: 3px solid #46bea3;
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-bottom: 1.5%;
+}
+
+.scroll-down-two::before,
+.scroll-down-two::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  border: 4px solid #93e1d8;
+  height: 10px;
+  width: 10px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border-top: transparent;
+  border-left: transparent;
+  animation: scrolldown 1s ease-in-out infinite;
+  z-index: 99999;
+}
+
+.scroll-down-two::after {
+  top: 30%;
+  animation-delay: 0.3s;
+}
+
+/* .about {
   grid-area: about;
   margin: 0 10em;
   font-size: 1.5em;
@@ -217,61 +262,63 @@ li a:hover::after {
   z-index: -999;
   position: absolute;
   opacity: 0.25;
-}
+} */
 
 .about-text {
-  padding: 0.5em;
-  text-align: center;
+  font-size: 1.5vw;
+  /* padding: 0.5em; */
+  /* text-align: center; */
 }
 
 .about-title {
   grid-area: about-title;
   text-decoration-line: underline;
-  margin: 0.5em 1em 1em 1em;
-  font-size: 8vw;
+  margin: 0.5em 1em 0em 1em;
+  font-size: 4.5vw;
 }
 
 .about-one {
   grid-area: one;
-  margin: 1em 10em 2em 10em;
-  font-size: 2vw;
+  margin: 1em 15em;
+  font-size: 1.5vw;
 }
 
 .about-two {
   grid-area: two;
-  margin: 1em 10em 2em 10em;
-  font-size: 2vw;
+  margin: 1em 15em;
+  font-size: 1.5vw;
 }
 
 .about-three {
   grid-area: three;
-  margin: 1em 10em 4em 10em;
-  font-size: 2vw;
+  margin: 1em 15em 10em 15em;
+  font-size: 1.5vw;
 }
 
-/* .about {
+.about {
   position: relative;
   font-size: 2vw;
   line-height: 1.8;
   z-index: 99999;
   font-weight: 400;
-  padding: 0 35em 1em 0;
+  padding: 0 15em 0 0;
   margin-left: 1.5em;
 }
 
 .about p span {
-  font-size: 2vw;
+  font-size: 1.5vw;
   color: #302e9a;
   font-weight: 900;
   text-decoration-line: underline;
-} */
+}
 
 .about-icons {
   width: 8em;
+  margin: 2em 0 0.5em 0;
 }
 
 .about-icon-title {
-  font-size: 3.5vw;
+  font-size: 2vw;
   text-decoration-line: underline;
   color: #93e1d8;
 }
@@ -320,8 +367,7 @@ li a:hover::after {
 
 .contact-button {
   display: flex;
-  justify-content: center;
-  padding: 0 0 10em 2em;
+  padding: 0 0 10em 0;
 }
 
 /*! Projects Styles */
@@ -347,7 +393,7 @@ li a:hover::after {
   grid-area: projectTitle;
   display: flex;
   justify-content: center;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 #project1 {
@@ -466,6 +512,7 @@ textarea {
   padding: 0.5em;
   width: 100%;
   outline: none;
+  resize: none;
 }
 
 .send {
@@ -658,6 +705,10 @@ textarea {
   }
 
   .scroller {
+    display: none;
+  }
+
+  .scroller-two {
     display: none;
   }
 
