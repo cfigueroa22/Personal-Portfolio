@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Mallanna", sans-serif;
 }
 
 /*! Section and Scroll Animations */
@@ -162,15 +162,17 @@ li a:hover::after {
 /*! Title Styles */
 .greet {
   font-size: 3.5vw;
-  padding-left: 0.4em;
+  padding-left: 0.2em;
   color: #302e9a;
 }
 
 .heading {
   /* position: relative; */
   font-weight: 400;
-  font-size: 7vw;
+  font-size: 8vw;
   padding-left: 0;
+  color: #46bea3;
+  text-shadow: 3px 3px 5px #302e9a;
 }
 
 .subtitle {
@@ -265,7 +267,7 @@ li a:hover::after {
 } */
 
 .about-text {
-  font-size: 1.5vw;
+  font-size: 2vw;
   /* padding: 0.5em; */
   /* text-align: center; */
 }
@@ -274,25 +276,25 @@ li a:hover::after {
   grid-area: about-title;
   text-decoration-line: underline;
   margin: 0.5em 1em 0em 1em;
-  font-size: 4.5vw;
+  font-size: 6vw;
 }
 
 .about-one {
   grid-area: one;
-  margin: 1em 15em;
-  font-size: 1.5vw;
+  margin: 1em 13em;
+  font-size: 2vw;
 }
 
 .about-two {
   grid-area: two;
-  margin: 1em 15em;
-  font-size: 1.5vw;
+  margin: 1em 13em;
+  font-size: 2vw;
 }
 
 .about-three {
   grid-area: three;
-  margin: 1em 15em 10em 15em;
-  font-size: 1.5vw;
+  margin: 1em 13em 10em 13em;
+  font-size: 2vw;
 }
 
 .about {
@@ -306,10 +308,9 @@ li a:hover::after {
 }
 
 .about p span {
-  font-size: 1.5vw;
+  font-size: 2vw;
   color: #302e9a;
   font-weight: 900;
-  text-decoration-line: underline;
 }
 
 .about-icons {
@@ -318,7 +319,7 @@ li a:hover::after {
 }
 
 .about-icon-title {
-  font-size: 2vw;
+  font-size: 3vw;
   text-decoration-line: underline;
   color: #93e1d8;
 }
@@ -387,7 +388,7 @@ li a:hover::after {
 }
 
 .project-title {
-  font-size: 7rem;
+  font-size: 8vw;
   color: black;
   text-decoration-line: underline;
   grid-area: projectTitle;
@@ -582,16 +583,16 @@ textarea {
 }
 /* !DEKSTOP */
 @media screen and (max-width: 1500px) {
-  .about {
-    /* padding-right: 22em; */
-  }
+  /* .about {
+     padding-right: 22em; 
+  } */
 }
 
 /* ! DESKTOP  */
 @media screen and (max-width: 1200px) {
-  .about {
-    /* padding-right: 18em; */
-  }
+  /* .about {
+     padding-right: 18em; 
+  } */
 }
 
 /*! LAPTOPS */
@@ -604,18 +605,26 @@ textarea {
   .about-one,
   .about-two,
   .about-three {
-    margin: 1em 5em 2em 5em;
+    margin: 1em 11em 2em 11em;
   }
 
   .contact-button {
     margin: 2em 0 0 0;
   }
+
+  .scroller-two {
+    display: none;
+  }
 }
 
 /*! TABLET  */
 @media screen and (max-width: 768px) {
+  .greet {
+    font-size: 8vw;
+  }
+
   .heading {
-    font-size: 5rem;
+    font-size: 12vw;
   }
 
   .about-title {
@@ -623,7 +632,7 @@ textarea {
   }
 
   .subtitle {
-    font-size: 3rem;
+    font-size: 7vw;
     margin-bottom: 0.5em;
   }
 
@@ -681,7 +690,7 @@ textarea {
   }
 
   .about p span {
-    font-size: 1.2rem;
+    font-size: 3vw;
   }
 
   .about::before {
@@ -702,6 +711,7 @@ textarea {
   .about-text {
     padding: 0.5em;
     text-align: center;
+    font-size: 3vw;
   }
 
   .scroller {
@@ -720,23 +730,27 @@ textarea {
   }
 
   .about-title {
-    font-size: 3.5rem;
+    font-size: 8vw;
   }
 
   .about-one,
   .about-two,
   .about-three {
-    font-size: 1.5rem;
+    font-size: 3vw;
     padding: 0 1em;
     margin: 1em 3em 2em 3em;
   }
 
   .about-icon-title {
-    font-size: 2rem;
+    font-size: 5vw;
   }
 
   .about-icons {
     width: 7em;
+  }
+
+  .project-title {
+    font-size: 10vw;
   }
 
   .form {
