@@ -131,7 +131,7 @@ when the page first opens */
 
 li a {
   font-size: 1.7rem;
-  color: black;
+  color: #302e9a;
   font-weight: 300;
   padding: 0.5rem;
   display: block;
@@ -141,7 +141,7 @@ li a::after {
   content: "";
   height: 2px;
   width: 0%;
-  background-color: #302e9a;
+  background-color: #46bea3;
   display: block;
   transition: 0.5s ease-in-out;
 }
@@ -150,7 +150,7 @@ li a:hover::after {
   content: "";
   height: 2px;
   width: 100%;
-  background-color: #302e9a;
+  background-color: #46bea3;
   display: block;
   transition: 0.5s ease-in-out;
 }
@@ -161,7 +161,7 @@ li a:hover::after {
 
 /*! Title Styles */
 .greet {
-  font-size: 3.5vw;
+  font-size: 5vw;
   padding-left: 0.2em;
   color: #302e9a;
 }
@@ -169,7 +169,7 @@ li a:hover::after {
 .heading {
   /* position: relative; */
   font-weight: 400;
-  font-size: 8vw;
+  font-size: 9vw;
   padding-left: 0;
   color: #46bea3;
   text-shadow: 3px 3px 5px #302e9a;
@@ -180,7 +180,7 @@ li a:hover::after {
   /* margin: 1em 0 0 0; */
   font-weight: 300;
   color: #302e9a;
-  font-size: 4.5vw;
+  font-size: 5vw;
   padding-left: 0.2em;
   padding-bottom: 0.5em;
 }
@@ -266,56 +266,105 @@ li a:hover::after {
   opacity: 0.25;
 } */
 
+.more-about {
+  display: grid;
+  grid-template-areas:
+    "about-title"
+    "about-one"
+    "about-two"
+    "about-three"
+    "scroller-two";
+}
+
 .about-text {
   font-size: 2vw;
-  /* padding: 0.5em; */
-  /* text-align: center; */
 }
 
 .about-title {
   grid-area: about-title;
   text-decoration-line: underline;
-  margin: 0.5em 1em 0em 1em;
+  margin: 0.5em 1em 0.5em 1em;
   font-size: 6vw;
 }
 
 .about-one {
-  grid-area: one;
-  margin: 1em 13em;
+  grid-area: about-one;
+  display: flex;
+  /* margin: 0 0 10vw 1vw; */
   font-size: 2vw;
+  margin: 0 8em 2em 8em;
+}
+
+.about-one-text {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2em;
 }
 
 .about-two {
-  grid-area: two;
-  margin: 1em 13em;
+  grid-area: about-two;
+  display: flex;
+  flex-direction: row-reverse;
+  /* margin: 0 0 10vw 1vw; */
   font-size: 2vw;
+  margin: 2em 8em 2em 8em;
+}
+
+.about-two-text {
+  display: flex;
+  flex-direction: column;
 }
 
 .about-three {
-  grid-area: three;
-  margin: 1em 13em 10em 13em;
+  grid-area: about-three;
+  display: flex;
   font-size: 2vw;
+  margin: 2em 8em 2em 8em;
+}
+
+.about-three-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.adapt-icon {
+  grid-area: adapt-icon;
+}
+
+.problem-icon {
+  grid-area: pro-icon;
+}
+
+.collab-icon {
+  grid-area: collab-icon;
+}
+
+.scroller-two {
+  grid-area: scroller-two;
+  margin: 5vw 0;
 }
 
 .about {
+  color: #302e9a;
   position: relative;
-  font-size: 2vw;
+  font-size: 2.5vw;
   line-height: 1.8;
   z-index: 99999;
   font-weight: 400;
   padding: 0 15em 0 0;
   margin-left: 1.5em;
+  text-shadow: 2.5px 2.5px 3px white;
 }
 
 .about p span {
-  font-size: 2vw;
-  color: #302e9a;
+  font-size: 2.5vw;
+  color: #46bea3;
   font-weight: 900;
+  text-shadow: 2px 2px 1px #302e9a;
 }
 
 .about-icons {
-  width: 8em;
-  margin: 2em 0 0.5em 0;
+  width: 15vw;
 }
 
 .about-icon-title {
